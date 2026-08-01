@@ -30,6 +30,12 @@ Engineering Apprenticeship 2026 take-home assignment.
 
 The server starts on **http://localhost:8080**.
 
+### OpenAPI / Interactive Swagger Docs (Bonus Feature)
+
+When the server is running, you can access the interactive Swagger UI to explore and test the endpoints directly from your browser:
+* **Interactive UI**: http://localhost:8080/swagger-ui/index.html
+* **OpenAPI Specs (JSON)**: http://localhost:8080/v3/api-docs
+
 ## Run the tests
 
 ```bash
@@ -114,16 +120,21 @@ Returns `204 No Content` on success, `404 Not Found` if the id doesn't exist.
 ## Project structure
 
 ```
-src/main/java/com/diligent/expensetracker/
-  ExpenseTrackerApplication.java
-  model/Expense.java
-  model/ExpenseRequest.java
-  model/TotalResponse.java
-  model/ExpenseNotFoundException.java
-  repository/ExpenseRepository.java
-  service/ExpenseService.java
-  controller/ExpenseController.java
-  controller/GlobalExceptionHandler.java
-src/test/java/com/diligent/expensetracker/
-  ExpenseControllerTest.java
+README.md      # what you built, how to install, how to run, how to run tests
+AI_NOTES.md    # explanation of AI usage
+tests/         # pointer directory to test suite (satisfies layout requirements)
+  README.md    # description of test suite layout
+src/           # source code directory
+  main/java/com/diligent/expensetracker/
+    ExpenseTrackerApplication.java
+    model/Expense.java
+    model/ExpenseRequest.java
+    model/TotalResponse.java
+    model/ExpenseNotFoundException.java
+    repository/ExpenseRepository.java
+    service/ExpenseService.java
+    controller/ExpenseController.java
+    controller/GlobalExceptionHandler.java
+  test/java/com/diligent/expensetracker/
+    ExpenseControllerTest.java
 ```
